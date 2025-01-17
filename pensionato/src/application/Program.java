@@ -32,7 +32,7 @@ public class Program {
         System.out.print("Quartos ocupados");
         for(int i=0; i< registro.length; i++){
         if(registro[i].getRoom() != 0){
-            System.out.printf("\nO quarto %d está ocupado", i+1);
+            System.out.printf("\nO quarto %d está ocupado por %s", i+1, registro[i].getName());
         }
         }
 
