@@ -35,7 +35,7 @@ public class Program {
             } else if(outsourced == 'n') {
                 employee.add(new Employee(name, hours, valuePerHour));
             } else{
-                System.out.println("Error! this input is invalid!");
+                System.out.println("This input is invalid!");
             }
         }
 
