@@ -18,9 +18,7 @@ public abstract class Shape {
         this.color = color;
     }
 
-    public Double area(){
-        return 0.0;
-    }
+    public  abstract  double area();
 
     @Override
     public String toString() {
