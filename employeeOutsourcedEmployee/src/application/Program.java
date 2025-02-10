@@ -18,7 +18,7 @@ public class Program {
         List<Employee> employee = new ArrayList<>(n);
         for(int i=0; i<n; i++){
             System.out.println("Employee #" + (i+1) + ": data");
-            System.out.print("Outsourced (y/n): ");
+            System.out.print("Outsourced (y/n) ");
             char outsourced = sc.next().charAt(0);
             sc.nextLine();
             System.out.print("Name: ");
