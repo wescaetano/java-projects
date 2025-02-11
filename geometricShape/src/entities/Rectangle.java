@@ -36,6 +36,4 @@ public class Rectangle extends Shape {
         return width * height;
     }
 
-
-
 }

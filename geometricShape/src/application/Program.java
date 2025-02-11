@@ -36,7 +36,7 @@ public class Program {
         }
 
         for(Shape sh : shape){
-            System.out.println(sh);
+            System.out.println(sh.area());
         }
 
 
