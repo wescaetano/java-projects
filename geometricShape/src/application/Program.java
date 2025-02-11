@@ -16,7 +16,6 @@ public class Program {
         System.out.print("Enter the number of shapes: ");
         int n = sc.nextInt();
         sc.nextLine();
-
         List<Shape> shape = new ArrayList<>(n);
         for(int i=0; i<n; i++){
             System.out.print("Retangle or circle (r/c): ");
