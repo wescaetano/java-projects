@@ -20,8 +20,4 @@ public abstract class Shape {
 
     public  abstract  double area();
 
-    @Override
-    public String toString() {
-        return String.format("%.2f", area());
-    }
 }
