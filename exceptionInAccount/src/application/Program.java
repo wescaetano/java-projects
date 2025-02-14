@@ -22,8 +22,6 @@ public class Program {
             double withdrawLimit = sc.nextDouble();
             Account account = new Account(number, holder, firstDeposit, withdrawLimit);
 
-
-
             System.out.println();
             System.out.print("Enter amount for withdraw: ");
             double withdraw = sc.nextDouble();
@@ -32,9 +30,9 @@ public class Program {
             System.out.println(account);
 
         } catch(DomainException e){
-            throw new RuntimeException("Error: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         } catch(RuntimeException e){
-            throw new RuntimeException("Unexpected error");
+            System.out.println("Unexpected error");
         }
     }
 }
