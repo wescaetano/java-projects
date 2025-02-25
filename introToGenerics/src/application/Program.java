@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
-         /*Ao tornar PrintService genérico com <T>, podemos definir o tipo exato
+         /*Generics: Ao tornar PrintService genérico com <T>, podemos definir o tipo exato
         na classe Program (como Integer, String, Double etc.). Isso traz segurança, pois
         impede a inserção de tipos errados na lista o que é chamado de type safety, e reutilização, já que a mesma classe
          pode ser usada em diferentes contextos sem precisar ser reescrita.
