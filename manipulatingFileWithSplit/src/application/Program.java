@@ -28,7 +28,7 @@ public class Program {
         String sourceFileStr = sc.nextLine();
 
         // Cria um objeto File com base no caminho informado
-        File sourceFile = new File(sourceFileStr);s
+        File sourceFile = new File(sourceFileStr);
         // Obtém o diretório onde o arquivo está localizado
         String sourceFolderStr = sourceFile.getParent();
 
