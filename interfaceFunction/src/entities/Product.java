@@ -28,6 +28,10 @@ public class Product {
         this.price = price;
     }
 
+    public static String staticUpperCaseName(Product p){
+        return p.getName().toUpperCase();
+    }
+
     @Override
     public String toString() {
         return "name: " + name +
