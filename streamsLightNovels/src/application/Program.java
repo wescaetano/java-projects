@@ -7,6 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Program {
     public static void main(String[] args) {
@@ -23,21 +24,17 @@ public class Program {
         ));
 
 
-        lightNovels.sort(Comparator.comparing(LightNovel::getTitle));
 
-        List<String> titles = new ArrayList<>();
-
-        for(LightNovel l : lightNovels){
-            if(l.getPrice() <= 4.00){
-                titles.add(l.getTitle());
-            }
-            if(titles.size() >=3){
-                break;
-            }
-        }
+                List<String> titles = lightNovels.stream().sorted(Comparator.comparing(LightNovel::getTitle))
+                .filter(ln -> ln.getPrice() <= 4.00)
+                .limit(3)
+                .map(LightNovel::getTitle)
+                .collect(Collectors.toList());
 
         System.out.println(lightNovels);
         System.out.println(titles);
+
+
 
 
 
