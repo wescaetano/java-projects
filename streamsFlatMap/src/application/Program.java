@@ -1,7 +1,10 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Program {
     public static void main(String[] args) {
@@ -24,5 +27,11 @@ public class Program {
             }
         }
 
+        // Com o 'FlatMap' isso se torna bem mais simples, já que ele adentra uma camada
+        // da coleção aninhada para podermos trabalhar com esses valores:
+
+        System.out.println();
+        System.out.println("-------FlatMap---------");
+        devDojo.stream().flatMap(Collection::stream).forEach(System.out::println);
     }
 }
