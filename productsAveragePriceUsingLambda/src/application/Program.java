@@ -24,15 +24,11 @@ public class Program {
                 list.add(new Product(fields[0], Double.parseDouble(fields[1])));
                 line = br.readLine();
             }
-            int cont=0;
-            double sum=0.0;
-            for(Product p : list){
-                cont++;
-                sum += p.getPrice();
-            }
-            final double average = sum / cont;
-            System.out.println("Products average price: " + String.format("%.2f", average));
-            list.stream().sorted(Comparator.comparing(Product::getName).reversed()).filter(p -> p.getPrice() < average).forEach(System.out::println);
+            // reduce(0.0, (sum, price) -> sum + price): Inicia com 0.0 e soma cada preço.
+            double avg = list.stream().map(p -> p.getPrice()).reduce(0.0, (sum,price) -> sum + price) / list.size();
+
+            System.out.println("Products average price: " + String.format("%.2f", avg));
+            list.stream().sorted(Comparator.comparing(Product::getName).reversed()).filter(p -> p.getPrice() < avg).forEach(System.out::println);
         } catch (IOException e){
             System.out.println("Error: " + e.getMessage());
         }
